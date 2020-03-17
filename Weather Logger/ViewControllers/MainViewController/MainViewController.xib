@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Weather_Logger" customModuleProvider="target">
+            <connections>
+                <outlet property="tableview" destination="h1t-q0-Paj" id="MNU-DC-WaW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggX-qn-wwN">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="glM-Gp-vC5">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Logger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-OL-lBu">
+                            <rect key="frame" x="40" y="69" width="334" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                            <color key="textColor" red="0.027450980392156862" green="0.1908509135" blue="0.26994931700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="highlightedColor" red="0.031473871319999999" green="0.23358765240000001" blue="0.33345565199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="glM-Gp-vC5" firstAttribute="top" secondItem="ggX-qn-wwN" secondAttribute="top" id="Irg-kJ-sqD"/>
+                        <constraint firstAttribute="height" constant="100" id="JI8-RF-FJJ"/>
+                        <constraint firstAttribute="bottom" secondItem="aJh-OL-lBu" secondAttribute="bottom" constant="10" id="PJb-Js-exe"/>
+                        <constraint firstAttribute="trailing" secondItem="aJh-OL-lBu" secondAttribute="trailing" constant="40" id="Zof-be-lX3"/>
+                        <constraint firstAttribute="bottom" secondItem="glM-Gp-vC5" secondAttribute="bottom" id="iL5-hu-qQK"/>
+                        <constraint firstAttribute="trailing" secondItem="glM-Gp-vC5" secondAttribute="trailing" id="kvX-AA-v8y"/>
+                        <constraint firstItem="aJh-OL-lBu" firstAttribute="leading" secondItem="ggX-qn-wwN" secondAttribute="leading" constant="40" id="nCU-C0-t2M"/>
+                        <constraint firstItem="glM-Gp-vC5" firstAttribute="leading" secondItem="ggX-qn-wwN" secondAttribute="leading" id="o0r-2R-qKd"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h1t-q0-Paj">
+                    <rect key="frame" x="0.0" y="108" width="414" height="661"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Fdz-19-9Na"/>
+                        <outlet property="delegate" destination="-1" id="kp6-EP-txM"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcW-Ui-iNA">
+                    <rect key="frame" x="157" y="782" width="100" height="40"/>
+                    <color key="backgroundColor" red="0.031915273520000002" green="0.2295421362" blue="0.33353155849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="CJH-IC-JEL"/>
+                        <constraint firstAttribute="width" constant="100" id="XqT-z3-Qy0"/>
+                    </constraints>
+                    <state key="normal" title="Save">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnSaveAction:" destination="-1" eventType="touchUpInside" id="uP4-UV-0uF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="h1t-q0-Paj" firstAttribute="top" secondItem="ggX-qn-wwN" secondAttribute="bottom" constant="8" symbolic="YES" id="4HB-Fv-hvC"/>
+                <constraint firstItem="h1t-q0-Paj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GQP-lt-LKd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ggX-qn-wwN" secondAttribute="trailing" id="IPU-Ub-d20"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kcW-Ui-iNA" secondAttribute="bottom" constant="40" id="PKr-EG-eaa"/>
+                <constraint firstItem="ggX-qn-wwN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aST-RY-P5r"/>
+                <constraint firstItem="kcW-Ui-iNA" firstAttribute="top" secondItem="h1t-q0-Paj" secondAttribute="bottom" constant="13" id="dDI-aF-oo3"/>
+                <constraint firstItem="ggX-qn-wwN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="feD-QX-G0Z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="h1t-q0-Paj" secondAttribute="trailing" id="v79-D1-Wee"/>
+                <constraint firstItem="kcW-Ui-iNA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="z9T-bg-4dS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="banner" width="170.66667175292969" height="47.666667938232422"/>
+    </resources>
+</document>

@@ -1,0 +1,20 @@
+PODS:
+  - JGProgressHUD (2.1)
+  - SwiftyGif (5.2.0)
+
+DEPENDENCIES:
+  - JGProgressHUD
+  - SwiftyGif
+
+SPEC REPOS:
+  trunk:
+    - JGProgressHUD
+    - SwiftyGif
+
+SPEC CHECKSUMS:
+  JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
+  SwiftyGif: b85c6b33a9411859d9e1db998b6a8214aea942df
+
+PODFILE CHECKSUM: 56b17c92d2e4a24abd87492f97836ba72bfb2f5e
+
+COCOAPODS: 1.8.4
